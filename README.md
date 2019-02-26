@@ -29,6 +29,6 @@ Also i made fish eatable on our server, you should do that too.
 
 -----------------------------------------------------------------------------------------------
 
-
-
+Put the soundfiles into your InteractSound script and import the sql.
+-----------------------------------------------------------------------------------------------
 You can modify and change whatever you want, but please give credits to everybody.
