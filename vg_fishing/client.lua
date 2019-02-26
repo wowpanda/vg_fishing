@@ -25,7 +25,7 @@ This Script was built on top of a Version of the Fishingscript of FiveM-Forum-Us
 His allowence was given.
 
 Also i used code of Thaisen69 AnchorBoat Script https://github.com/Thaisen69/AnchorBoat
-And of course the gread script InteractSound from Scott: https://forum.fivem.net/t/release-play-custom-sounds-for-interactions/8282
+And of course the great script InteractSound from Scott: https://forum.fivem.net/t/release-play-custom-sounds-for-interactions/8282
 aaand NativeUI: https://forum.fivem.net/t/release-nativeui-port-for-p/4902
 
 Created by lyrics --> VG-Community (LivingInLosSantos)
@@ -227,6 +227,8 @@ end
 Citizen.CreateThread(function() 
     while true do
 		Citizen.Wait(0)
+
+		local playerPed = PlayerPedId()
 		
 		local playerCoords = GetEntityCoords(PlayerPedId())
 		if (GetDistanceBetweenCoords(playerCoords, Config.FishingShop.x, Config.FishingShop.y, Config.FishingShop.z, true) < 50.0) then
@@ -404,6 +406,7 @@ end)
 
 RegisterNetEvent('vg_fishing:fishstart')
 AddEventHandler('vg_fishing:fishstart', function()	
+	local playerPed = PlayerPedId()
 	local pos = GetEntityCoords(playerPed)
 	if IsPedInAnyVehicle(playerPed) then
 		ShowNotification("~y~You can not fish from a vehicle")
@@ -411,7 +414,6 @@ AddEventHandler('vg_fishing:fishstart', function()
 		if pos.y >= 7700 or pos.y <= -4000 or pos.x <= -3700 or pos.x >= 4300 then
 			ShowNotification("~g~Fishing started")
 			TaskStartScenarioInPlace(playerPed, "WORLD_HUMAN_STAND_FISHING", 0, true)
-			print("test")
 			TriggerEvent('vg_fishing:playSound', "fishing_start")
 			fishing = true
 		else
@@ -423,7 +425,6 @@ end, false)
 RegisterNetEvent('vg_fishing:playSound')
 AddEventHandler('vg_fishing:playSound', function(sound)
 	local clientNetId = GetPlayerServerId(PlayerId())
-	print("triggered sound" .. sound)
 	TriggerServerEvent("InteractSound_SV:PlayOnOne", clientNetId, sound, 0.5)
 end)
 
