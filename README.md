@@ -5,10 +5,14 @@ This Script was built on top of a Version of the Fishingscript of FiveM-Forum-Us
 His allowence was given.
 
 Also i used code of Thaisen69 AnchorBoat Script https://github.com/Thaisen69/AnchorBoat
+
 And of course the great script InteractSound from Scott: https://forum.fivem.net/t/release-play-custom-sounds-for-interactions/8282
+
 aaand NativeUI: https://forum.fivem.net/t/release-nativeui-port-for-p/4902
 
 Created by lyrics --> VG-Community (LivingInLosSantos)
+
+
 -----------------------------------------------------------------------------------------------
 
 Biggest difference:
