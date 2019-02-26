@@ -26,3 +26,9 @@ Biggest difference:
 
 ..and some other small things.
 Also i made fish eatable on our server, you should do that too. 
+
+-----------------------------------------------------------------------------------------------
+
+
+
+You can modify and change whatever you want, but please give credits to everybody.
